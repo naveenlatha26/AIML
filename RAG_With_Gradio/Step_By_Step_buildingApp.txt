@@ -1,0 +1,65 @@
+
+
+1. Creating a virtual environment managing the dependencies
+2. What .env file and how to load secrets from .env file
+3. How to configure and load llm models from local folder and using together api
+4. How to modularize your code and create a vector DB
+5. pydantic & what is fast api from concepts to code
+6. What is Grdio and how to create UIs using Gradio
+7. Combine everything and create a fully functional LLM App.
+8. Dockerize your solution (optional)
+
+Resources Used
+Model_path :
+Kaggle Dataset link :
+Embeeding Model:
+Hugging Face (ChatInterface) ->
+
+
+
+Terminal Commands Used :
+
+1. Creating a virtual environment managing the dependencies
+-----------------------------------------------------------------
+From Terminal
+# For Creating the virtual environment : python3 -m venv .venv
+# To activate virtual environment : .venv\Scripts\Activate.ps1 || source .venv/bin/activate
+# Upgrade the pip version (optional) : python -m pip install --upgrade pip
+# Load the requirement mentioned below
+# navigate to your application folder in terminal and run requirement.txt using command :  pip install -r requirements.txt
+
+Requirements
+torch==2.1
+transformers==4.34.0
+ctransformers
+gradio
+fastapi
+python-dotenv
+langchain
+chromadb
+pypdf2
+sentence_transformers
+tiktoken
+tqdm
+together
+langchain-together
+langchain_community
+
+
+2. What .env file and how to load secrets from .env file
+-----------------------------------------------------------------------------
+#Create .env file and provide the path of your models, datasets, vectorstore, api keys, embeed models, etc.
+#Create a file with .ipynb (jupyter notebook) to load the require files
+# from dotenv import load_dotenv
+# Load .env files : load_dotenv()
+# To load a particular variables and secrets from env file
+        import os
+        os.getenv('MODEL_PATH')
+
+3. How to configure and load llm models from local folder and using together api
+----------------------------------------------------------------------------------
+Refer to llm.py file, where we write the functions to load the model offline or online.
+Will refer the functions in fastapi.py to call and validate against offline and online
+
+4. How to modularize your code and create a vector DB
+--------------------------------------------------------------------------------
